@@ -1,0 +1,875 @@
+Python Basics
+1.	Calculate the Area of a Circle
+o	Question: Write a program to calculate the area of a circle given its radius.
+o	Answer:
+
+
+import math
+
+radius = float(input("Enter the radius of the circle: "))
+area = math.pi * (radius ** 2)
+print(f"The area of the circle is: {area}")
+2.	Swap Two Numbers
+o	Question: Write a program to swap two numbers without using a temporary variable.
+o	Answer:
+
+
+x = int(input("Enter first number: "))
+y = int(input("Enter second number: "))
+
+x, y = y, x
+
+print(f"After swapping: x = {x}, y = {y}")
+3.	Check Prime Number
+o	Question: Write a program to check if a number is prime.
+o	Answer:
+
+
+num = int(input("Enter a number: "))
+if num > 1:
+    for i in range(2, int(num/2)+1):
+        if (num % i) == 0:
+            print(f"{num} is not a prime number")
+            break
+    else:
+        print(f"{num} is a prime number")
+else:
+    print(f"{num} is not a prime number")
+4.	Factorial of a Number
+o	Question: Write a program to find the factorial of a number.
+o	Answer:
+
+
+num = int(input("Enter a number: "))
+factorial = 1
+
+if num < 0:
+    print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+    print("The factorial of 0 is 1")
+else:
+    for i in range(1, num + 1):
+        factorial *= i
+    print(f"The factorial of {num} is {factorial}")
+5.	Reverse a String
+o	Question: Write a program to reverse a given string.
+o	Answer:
+
+
+string = input("Enter a string: ")
+reversed_string = string[::-1]
+print(f"Reversed string: {reversed_string}")
+Operators
+1.	Arithmetic Operations
+o	Question: Write a program to perform basic arithmetic operations: addition, subtraction, multiplication, and division.
+o	Answer:
+
+
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+
+addition = a + b
+subtraction = a - b
+multiplication = a * b
+division = a / b if b != 0 else "undefined"
+
+print(f"Addition: {addition}, Subtraction: {subtraction}, Multiplication: {multiplication}, Division: {division}")
+2.	Relational Operators
+o	Question: Write a program to compare two numbers using relational operators.
+o	Answer:
+
+
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+
+print(f"a > b: {a > b}")
+print(f"a < b: {a < b}")
+print(f"a == b: {a == b}")
+print(f"a != b: {a != b}")
+print(f"a >= b: {a >= b}")
+print(f"a <= b: {a <= b}")
+3.	Logical Operators
+o	Question: Write a program to demonstrate the use of logical operators.
+o	Answer:
+
+
+a = True
+b = False
+
+print(f"a and b: {a and b}")
+print(f"a or b: {a or b}")
+print(f"not a: {not a}")
+4.	Bitwise Operators
+o	Question: Write a program to demonstrate the use of bitwise operators.
+o	Answer:
+
+
+a = 10  # 1010 in binary
+b = 4   # 0100 in binary
+
+print(f"a & b: {a & b}")  # Bitwise AND
+print(f"a | b: {a | b}")  # Bitwise OR
+print(f"a ^ b: {a ^ b}")  # Bitwise XOR
+print(f"~a: {~a}")        # Bitwise NOT
+print(f"a << 1: {a << 1}") # Left shift
+print(f"a >> 1: {a >> 1}") # Right shift
+5.	Assignment Operators
+o	Question: Write a program to demonstrate the use of assignment operators.
+o	Answer:
+
+
+a = 5
+print(f"Initial value of a: {a}")
+
+a += 3
+print(f"a += 3: {a}")
+
+a -= 2
+print(f"a -= 2: {a}")
+
+a *= 4
+print(f"a *= 4: {a}")
+
+a /= 2
+print(f"a /= 2: {a}")
+Conditional Statements
+1.	If Statement
+o	Question: Write a program to check if a number is positive.
+o	Answer:
+
+
+num = float(input("Enter a number: "))
+if num > 0:
+    print(f"{num} is positive")
+2.	If-Else Statement
+o	Question: Write a program to check if a number is odd or even.
+o	Answer:
+
+
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print(f"{num} is even")
+else:
+    print(f"{num} is odd")
+3.	If-Elif-Else Statement
+o	Question: Write a program to check if a number is positive, negative, or zero.
+o	Answer:
+
+
+num = float(input("Enter a number: "))
+if num > 0:
+    print(f"{num} is positive")
+elif num < 0:
+    print(f"{num} is negative")
+else:
+    print(f"{num} is zero")
+4.	Nested If Statement
+o	Question: Write a program to determine the largest of three numbers using nested if statements.
+o	Answer:
+
+
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+c = float(input("Enter third number: "))
+
+if a >= b:
+    if a >= c:
+        print(f"The largest number is {a}")
+    else:
+        print(f"The largest number is {c}")
+else:
+    if b >= c:
+        print(f"The largest number is {b}")
+    else:
+        print(f"The largest number is {c}")
+5.	If-Else with Multiple Conditions
+o	Question: Write a program to check if a year is a leap year.
+o	Answer:
+
+
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a leap year")
+else:
+    print(f"{year} is not a leap year")
+Loops
+1.	For Loop
+o	Question: Write a program to print the first 10 natural numbers using a for loop.
+o	Answer:
+
+
+for i in range(1, 11):
+    print(i)
+2.	Nested For Loop
+o	Question: Write a program to print a multiplication table up to 10 using nested for loops.
+o	Answer:
+
+
+for i in range(1, 11):
+    for j in range(1, 11):
+        print(f"{i} x {j} = {i * j}")
+    print("")  # Blank line for better readability
+3.	For Loop with Break
+o	Question: Write a program to search for an element in a list. If found, print "Element found" and stop searching.
+o	Answer:
+
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+target = int(input("Enter a number to search: "))
+
+for num in numbers:
+    if num == target:
+        print("Element found")
+        break
+else:
+    print("Element not found")
+4.	For Loop with Continue
+o	Question: Write a program to print all numbers from 1 to 10 except 5 using a for loop and continue statement.
+o	Answer:
+
+
+for i in range(1, 11):
+    if i == 5:
+        continue
+    print(i)
+5.	For Loop with Pass
+o	Question: Write a program that iterates over a list of numbers and does nothing if the number is even using the pass statement.
+o	Answer:
+
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for num in numbers:
+    if num % 2 == 0:
+        pass
+    else:
+        print(f"Odd number: {num}")
+While Loop
+1.	Simple While Loop
+o	Question: Write a program to print numbers from 1 to 5 using a while loop.
+o	Answer:
+
+
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+2.	While Loop with Break
+o	Question: Write a program to repeatedly take user input until the user enters 0.
+o	Answer:
+
+
+while True:
+    num = int(input("Enter a number (0 to stop): "))
+    if num == 0:
+        break
+    print(f"You entered: {num}")
+3.	While Loop with Continue
+o	Question: Write a program to print only odd numbers from 1 to 10 using a while loop and continue statement.
+o	Answer:
+
+
+i = 1
+while i <= 10:
+    if i % 2 == 0:
+        i += 1
+        continue
+    print(i)
+    i += 1
+4.	While Loop with Else
+o	Question: Write a program to search for an element in a list using a while loop with an else statement.
+o	Answer:
+
+
+numbers = [10, 20, 30, 40, 50]
+i = 0
+target = int(input("Enter the number to search: "))
+
+while i < len(numbers):
+    if numbers[i] == target:
+        print("Element found")
+        break
+    i += 1
+else:
+    print("Element not found")
+5.	While Loop for Factorial Calculation
+o	Question: Write a program to calculate the factorial of a number using a while loop.
+o	Answer:
+
+
+num = int(input("Enter a number: "))
+factorial = 1
+i = 1
+
+while i <= num:
+    factorial *= i
+    i += 1
+
+print(f"The factorial of {num} is {factorial}")
+Type Casting
+1.	String to Integer Conversion
+o	Question: Write a program to convert a string containing a number into an integer.
+o	Answer:
+
+
+str_num = "100"
+int_num = int(str_num)
+print(f"String to integer: {int_num}")
+2.	Integer to Float Conversion
+o	Question: Write a program to convert an integer into a float.
+o	Answer:
+
+
+int_num = 25
+float_num = float(int_num)
+print(f"Integer to float: {float_num}")
+3.	Float to String Conversion
+o	Question: Write a program to convert a float into a string.
+o	Answer:
+
+
+float_num = 50.75
+str_num = str(float_num)
+print(f"Float to string: {str_num}")
+4.	List to Tuple Conversion
+o	Question: Write a program to convert a list into a tuple.
+o	Answer:
+
+
+my_list = [1, 2, 3, 4, 5]
+my_tuple = tuple(my_list)
+print(f"List to tuple: {my_tuple}")
+5.	String to List Conversion
+o	Question: Write a program to convert a string into a list of characters.
+o	Answer:
+
+
+my_string = "Hello"
+my_list = list(my_string)
+print(f"String to list: {my_list}")
+List Operations
+1.	List Append
+o	Question: Write a program to append an element to a list.
+o	Answer:
+
+
+my_list = [1, 2, 3]
+my_list.append(4)
+print(f"List after append: {my_list}")
+2.	List Insert
+o	Question: Write a program to insert an element at the second position in a list.
+o	Answer:
+
+
+my_list = [1, 2, 3]
+my_list.insert(1, "Hello")
+print(f"List after insert: {my_list}")
+3.	Nested List
+o	Question: Write a program to create a nested list and access an element from it.
+o	Answer:
+
+
+nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(f"Element at nested_list[1][2]: {nested_list[1][2]}")
+4.	List Pop
+o	Question: Write a program to remove and return the last element from a list using pop().
+o	Answer:
+
+
+my_list = [1, 2, 3, 4, 5]
+popped_element = my_list.pop()
+print(f"Popped element: {popped_element}")
+print(f"List after pop: {my_list}")
+5.	List with For Loop
+o	Question: Write a program to iterate over a list using a for loop and print each element.
+o	Answer:
+
+
+my_list = [10, 20, 30, 40, 50]
+for element in my_list:
+    print(element)
+Tuple Operations
+1.	Tuple Creation
+o	Question: Write a program to create a tuple and print its elements.
+o	Answer:
+
+
+my_tuple = (1, 2, 3, 4, 5)
+print(f"My tuple: {my_tuple}")
+2.	Tuple Operations
+o	Question: Write a program to perform concatenation and repetition operations on tuples.
+o	Answer:
+
+
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+
+concatenated_tuple = tuple1 + tuple2
+repeated_tuple = tuple1 * 2
+
+print(f"Concatenated tuple: {concatenated_tuple}")
+print(f"Repeated tuple: {repeated_tuple}")
+3.	Tuple with For Loop
+o	Question: Write a program to iterate over a tuple using a for loop and print each element.
+o	Answer:
+
+
+my_tuple = ('a', 'b', 'c', 'd')
+for element in my_tuple:
+    print(element)
+4.	Tuple Indexing
+o	Question: Write a program to access elements from a tuple using positive and negative indexing.
+o	Answer:
+
+
+my_tuple = (10, 20, 30, 40, 50)
+print(f"Element at index 1: {my_tuple[1]}")
+print(f"Element at index -1: {my_tuple[-1]}")
+Dictionary Operations
+1.	Dictionary Creation and Access
+o	Question: Write a program to create a dictionary and access its elements.
+o	Answer:
+
+
+my_dict = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+print(f"Name: {my_dict['name']}")
+print(f"Age: {my_dict['age']}")
+print(f"City: {my_dict['city']}")
+2.	Dictionary Insertion
+o	Question: Write a program to add a new key-value pair to an existing dictionary.
+o	Answer:
+
+
+my_dict = {'name': 'Alice', 'age': 25}
+my_dict['city'] = 'New York'
+print(f"Updated dictionary: {my_dict}")
+3.	Dictionary Deletion
+o	Question: Write a program to delete a key-value pair from a dictionary.
+o	Answer:
+
+
+my_dict = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+del my_dict['age']
+print(f"Dictionary after deletion: {my_dict}")
+4.	Dictionary with For Loop
+o	Question: Write a program to iterate over a dictionary and print each key-value pair.
+o	Answer:
+
+
+my_dict = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+for key, value in my_dict.items():
+    print(f"{key}: {value}")
+5.	Check Key in Dictionary
+o	Question: Write a program to check if a specific key exists in a dictionary.
+o	Answer:
+
+
+my_dict = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+key_to_check = 'age'
+
+if key_to_check in my_dict:
+    print(f"'{key_to_check}' exists in the dictionary with value: {my_dict[key_to_check]}")
+else:
+    print(f"'{key_to_check}' does not exist in the dictionary.")
+Set Operations
+1.	Set Creation and Access
+o	Question: Write a program to create a set and print its elements.
+o	Answer:
+
+
+my_set = {1, 2, 3, 4, 5}
+print(f"My set: {my_set}")
+2.	Set Union and Intersection
+o	Question: Write a program to perform union and intersection operations on two sets.
+o	Answer:
+
+
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+union_set = set1.union(set2)
+intersection_set = set1.intersection(set2)
+
+print(f"Union: {union_set}")
+print(f"Intersection: {intersection_set}")
+3.	Set Difference
+o	Question: Write a program to find the difference between two sets.
+o	Answer:
+
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {3, 4, 6}
+
+difference_set = set1.difference(set2)
+
+print(f"Difference: {difference_set}")
+4.	Set Symmetric Difference
+o	Question: Write a program to find the symmetric difference between two sets.
+o	Answer:
+
+
+set1 = {1, 2, 3}
+set2 = {2, 3, 4}
+
+sym_diff = set1.symmetric_difference(set2)
+
+print(f"Symmetric Difference: {sym_diff}")
+5.	Set Update
+o	Question: Write a program to update a set with another set using the update() method.
+o	Answer:
+
+
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+set1.update(set2)
+
+print(f"Updated set: {set1}")
+Functions
+1.	Function Definition
+o	Question: Write a simple function to calculate the square of a number.
+o	Answer:
+
+
+def square(num):
+    return num * num
+
+result = square(5)
+print(f"Square of 5: {result}")
+2.	Function with Arguments
+o	Question: Write a function that takes two numbers and returns their sum.
+o	Answer:
+
+
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+print(f"Sum: {result}")
+3.	Function with Default Arguments
+o	Question: Write a function that greets a person. If no name is provided, it should greet with "Hello, World!".
+o	Answer:
+
+
+def greet(name="World"):
+    print(f"Hello, {name}!")
+
+greet()         # Default greeting
+greet("Alice")  # Custom greeting
+4.	Function with Return Values
+o	Question: Write a function that returns the factorial of a given number.
+o	Answer:
+
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+result = factorial(5)
+print(f"Factorial of 5: {result}")
+5.	Function with Variable Length Arguments
+o	Question: Write a function that takes a variable number of arguments and returns their sum.
+o	Answer:
+
+
+def sum_of_numbers(*args):
+    return sum(args)
+
+result = sum_of_numbers(1, 2, 3, 4, 5)
+print(f"Sum: {result}")
+Exception Handling
+1.	Basic Try-Except
+o	Question: Write a program that handles division by zero using try-except.
+o	Answer:
+
+
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+2.	Multiple Exceptions
+o	Question: Write a program that handles both ValueError and ZeroDivisionError.
+o	Answer:
+
+
+try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+except ValueError:
+    print("Invalid input! Please enter a number.")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+3.	Finally Clause
+o	Question: Write a program that demonstrates the use of the finally clause.
+o	Answer:
+
+
+try:
+    result = 10 / 2
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+finally:
+    print("This will always execute.")
+4.	Custom Exception
+o	Question: Write a program that raises a custom exception if a number is negative.
+o	Answer:
+
+
+class NegativeNumberError(Exception):
+    pass
+
+def check_positive(number):
+    if number < 0:
+        raise NegativeNumberError("Negative number detected!")
+    return number
+
+try:
+    check_positive(-5)
+except NegativeNumberError as e:
+    print(e)
+5.	Raise Exception
+o	Question: Write a program that raises a ValueError if the input is not an integer.
+o	Answer:
+
+
+def check_integer(value):
+    if not isinstance(value, int):
+        raise ValueError("Input is not an integer!")
+    return value
+
+try:
+    check_integer("abc")
+except ValueError as e:
+    print(e)
+File Handling
+1.	File Read
+o	Question: Write a program to read the content of a text file and print it.
+o	Answer:
+
+
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)
+2.	File Write
+o	Question: Write a program to write a string to a text file.
+o	Answer:
+
+
+with open('example.txt', 'w') as file:
+    file.write("Hello, World!")
+3.	File Append
+o	Question: Write a program to append a string to an existing text file.
+o	Answer:
+
+
+with open('example.txt', 'a') as file:
+    file.write("\nAppended text.")
+4.	File Read Line by Line
+o	Question: Write a program to read a file line by line and print each line.
+o	Answer:
+
+
+with open('example.txt', 'r') as file:
+    for line in file:
+        print(line, end='')
+5.	File Handling with Exception
+o	Question: Write a program to handle file not found exception while trying to open a file.
+o	Answer:
+
+
+try:
+    with open('non_existent_file
+Classes and Objects
+1.	Basic Class
+o	Question: Write a class Person with attributes name and age. Create an object and print its attributes.
+o	Answer:
+
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+person = Person("Alice", 30)
+print(f"Name: {person.name}")
+print(f"Age: {person.age}")
+2.	Class with Method
+o	Question: Write a class Circle with a method to calculate the area of the circle.
+o	Answer:
+
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def area(self):
+        return 3.14 * self.radius * self.radius
+
+circle = Circle(5)
+print(f"Area of circle: {circle.area()}")
+3.	Encapsulation
+o	Question: Write a class BankAccount with private attributes balance. Provide methods to deposit and withdraw money.
+o	Answer:
+
+
+class BankAccount:
+    def __init__(self):
+        self.__balance = 0
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def withdraw(self, amount):
+        if self.__balance >= amount:
+            self.__balance -= amount
+            return amount
+        else:
+            return "Insufficient balance"
+
+    def get_balance(self):
+        return self.__balance
+
+account = BankAccount()
+account.deposit(100)
+print(f"Balance: {account.get_balance()}")
+account.withdraw(50)
+print(f"Balance: {account.get_balance()}")
+4.	Polymorphism
+o	Question: Write a program to demonstrate polymorphism with a method named area in different classes.
+o	Answer:
+
+
+class Rectangle:
+    def __init__(self, length, breadth):
+        self.length = length
+        self.breadth = breadth
+    
+    def area(self):
+        return self.length * self.breadth
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def area(self):
+        return 3.14 * self.radius * self.radius
+
+shapes = [Rectangle(10, 5), Circle(7)]
+
+for shape in shapes:
+    print(f"Area: {shape.area()}")
+5.	Inheritance (Single Inheritance)
+o	Question: Write a program to demonstrate single inheritance with a base class Animal and a derived class Dog.
+o	Answer:
+
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return "Animal Sound"
+
+class Dog(Animal):
+    def speak(self):
+        return "Bark"
+
+dog = Dog("Buddy")
+print(f"{dog.name} says {dog.speak()}")
+6.	Inheritance (Multiple Inheritance)
+o	Question: Write a program to demonstrate multiple inheritance with classes Parent1, Parent2, and Child.
+o	Answer:
+
+
+class Parent1:
+    def function1(self):
+        return "Function 1"
+
+class Parent2:
+    def function2(self):
+        return "Function 2"
+
+class Child(Parent1, Parent2):
+    pass
+
+child = Child()
+print(child.function1())
+print(child.function2())
+7.	Inheritance (Multilevel Inheritance)
+o	Question: Write a program to demonstrate multilevel inheritance with classes Grandparent, Parent, and Child.
+o	Answer:
+
+
+class Grandparent:
+    def grandparent_function(self):
+        return "Grandparent Function"
+
+class Parent(Grandparent):
+    def parent_function(self):
+        return "Parent Function"
+
+class Child(Parent):
+    def child_function(self):
+        return "Child Function"
+
+child = Child()
+print(child.grandparent_function())
+print(child.parent_function())
+print(child.child_function())
+8.	Inheritance (Hierarchical Inheritance)
+o	Question: Write a program to demonstrate hierarchical inheritance with a base class Vehicle and derived classes Car and Bike.
+o	Answer:
+
+
+class Vehicle:
+    def __init__(self, make):
+        self.make = make
+
+    def info(self):
+        return f"Make: {self.make}"
+
+class Car(Vehicle):
+    def car_function(self):
+        return "Car Function"
+
+class Bike(Vehicle):
+    def bike_function(self):
+        return "Bike Function"
+
+car = Car("Toyota")
+bike = Bike("Yamaha")
+
+print(car.info())
+print(car.car_function())
+
+print(bike.info())
+print(bike.bike_function())
+9.	Inheritance (Hybrid Inheritance)
+o	Question: Write a program to demonstrate hybrid inheritance involving multiple base and derived classes.
+o	Answer:
+
+
+class Base1:
+    def base1_function(self):
+        return "Base1 Function"
+
+class Base2:
+    def base2_function(self):
+        return "Base2 Function"
+
+class Derived1(Base1, Base2):
+    def derived1_function(self):
+        return "Derived1 Function"
+
+class Derived2(Derived1):
+    def derived2_function(self):
+        return "Derived2 Function"
+
+derived = Derived2()
+print(derived.base1_function())
+print(derived.base2_function())
+print(derived.derived1_function())
+print(derived.derived2_function())
+
